@@ -1,0 +1,8 @@
+/* Estilo para dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar {
+      background-color: #333; /* Cambia esto al color de fondo oscuro que desees */
+      color: #fff; /* Cambia esto al color de texto que desees en el fondo oscuro */
+    }
+  }
+  

@@ -1,0 +1,164 @@
+{% extends 'padre.html' %}
+
+{% block   cambia %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tu Página</title>
+    
+    <!-- Agrega aquí tus enlaces a los archivos CSS -->
+    <link rel="stylesheet" href="{% static 'tu_estilo.css' %}">
+    <!-- Agrega el enlace al archivo CSS de Bootstrap (si lo estás utilizando) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    
+    <style>
+        body {
+            background-color: #f8f8f8; /* Fondo aún más claro */
+        }
+
+        .info_section h5 {
+            transition: color 0.3s; /* Transición de color en 0.3 segundos */
+        }
+
+        .info_section h5:hover {
+            color: #ff6600; /* Cambio de color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+<!-- What We Do Section -->
+<section class="do_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>COMO LO HACEMOS</h2>
+            <p>Trabajamos con diferentes lenguajes, frameworks para poder satifacer los requerimientos de nuestros clientes<br>
+            Aca te mostramos algunos ...</p>
+        </div>
+        <div class="do_container">
+            <div class="box arrow-start arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-1.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>Python/Django</h6>
+                </div>
+            </div>
+            <div class="box arrow-middle arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-2.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>Desarrollo y amor </h6>
+                </div>
+            </div>
+            <div class="box arrow-middle arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-3.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>Html5</h6>
+                </div>
+            </div>
+            <div class="box arrow-end arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-4.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>Css</h6>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-box">
+                    <img src="{% static 'images/d-5.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>Wordpress</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Who We Are Section -->
+<section class="who_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="img-box">
+                    <img src="{% static 'images/who-img.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="detail-box">
+                    <div class="heading_container">
+                        <h2>PORQUE NOSOTROS?</h2>
+                    </div>
+                    <p>Somos un equipo de emprendedores que nuestro principal objetivo es que tu aplicacion web pueda  acompañarte a largo
+                    de tu camino, te armamos el camino web para que puedas manejarlo a tu gusto...
+                    "TU EXITO, ES NUESTRO EXITO"</p>
+                    <div>
+                       
+                    </div>
+                </div>
+            </div>
+           </div>
+</section>
+<!-- End Who We Are Section -->
+
+<!-- Creative Works Section -->
+<section class="work_section layout_padding">
+    <div class="container">
+                
+<!-- What Customers Say Section -->
+<section class="client_section">
+    <div class="container">
+        <div class="heading_container">
+           <!-- Enlace a la página de contacto -->
+<a href="{% url 'contacto' %}" class="contact-link">
+    <h2>No esperes mas, <span>Contactanos</span></h2>
+</a>
+
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="target_section layout_padding2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="detail-box">
+                    <h2>3+</h2>
+                    <h5> Años de desarrollos y acompañamiento</h5>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="detail-box">
+                    <h2>250+</h2>
+                    <h5>Proyectos terminados </h5>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="detail-box">
+                    <h2>250+</h2>
+                    <h5>Clientes satifechos</h5>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="detail-box">
+                    <h2>1500+</h2>
+                    <h5>Tazas de cafe</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+{% endblock cambia %}

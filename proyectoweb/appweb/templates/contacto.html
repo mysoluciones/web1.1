@@ -1,0 +1,89 @@
+{% extends 'padre.html' %}
+
+{% block cambia %}
+ 
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tu Página</title>
+    
+    <!-- Agrega aquí tus enlaces a los archivos CSS -->
+    <link rel="stylesheet" href="{% static 'tu_estilo.css' %}">
+    <!-- Agrega el enlace al archivo CSS de Bootstrap (si lo estás utilizando) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    
+    <style>
+        body {
+            background-color: #f8f8f8; /* Fondo aún más claro */
+        }
+
+        .info_section h5 {
+            transition: color 0.3s; /* Transición de color en 0.3 segundos */
+        }
+
+        .info_section h5:hover {
+            color: #ff6600; /* Cambio de color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+<!-- Formulario de contacto -->
+<!-- Formulario de contacto -->
+<section class="contact_section layout_padding">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="heading_container">
+                    <h2>Cordina una reunion</h2>
+                    <p>Te mostramos algunos trabajos realizados</p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="nombre_apellido">Nombre y Apellido</label>
+                        <input type="text" class="form-control" id="nombre_apellido" name="nombre_apellido">
+                    </div>
+                    <hr class="yellow-line">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono">
+                    </div>
+                    <hr class="yellow-line">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <hr class="yellow-line">
+                    <div class="form-group">
+                        <label for="tipo_servicio">Tipo de Servicio</label>
+                        <select class="form-control" id="tipo_servicio" name="tipo_servicio">
+                            <option value="Diseño web">Diseño web</option>
+                            <option value="Redes sociales">Redes sociales</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <hr class="yellow-line">
+                    <div class="form-group">
+                        <label for="consulta">Consulta</label>
+                        <textarea class="form-control" id="consulta" name="consulta" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Formulario de contacto -->
+
+
+</body>
+</html>
+
+
+
+{% endblock cambia %}

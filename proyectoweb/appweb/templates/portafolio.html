@@ -1,0 +1,176 @@
+{% extends 'padre.html' %}
+{% block camb %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de tu Página</title>
+    {% load static %}
+    <style>
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            /* Ajusta los estilos aquí para pantallas más pequeñas */
+
+            /* Modifica el tamaño del texto para una mejor legibilidad en pantallas pequeñas */
+            body {
+                font-size: 16px;
+            }
+
+            /* Ajusta el tamaño de las imágenes para que se adapten al ancho del dispositivo */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* Alinea el contenido en el centro del contenedor */
+            .container {
+                text-align: center;
+            }
+
+            /* Reduce el espacio entre elementos */
+            .box {
+                margin-bottom: 20px;
+            }
+
+            /* Estilos específicos para el carrusel en dispositivos móviles */
+            .carousel-item img {
+                width: 100%;
+                max-height: auto;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .carousel-control-prev, .carousel-control-next {
+                top: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- What We Do Section -->
+<section class="do_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>COMO LO HACEMOS</h2>
+            <p>Trabajamos con diferentes lenguajes y frameworks para poder satisfacer los requerimientos de nuestros clientes.<br>
+            Aquí te mostramos algunos de nuestros procesos:</p>
+        </div>
+        <div class="do_container">
+            <div class="box arrow-start arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-1.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                   <h5><a href="{% url 'contacto' %}"></h5>
+ <h6>Coordinamos<br> presupuestamos</h6></a>
+                </div>
+            </div>
+            <div class="box arrow-middle arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-2.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>Desarrollamos </h6>
+                </div>
+            </div>
+            <div class="box arrow-middle arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-3.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>Entregamos</h6>
+                </div>
+            </div>
+            <div class="box arrow-end arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-4.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>Acompañamos</h6>
+                </div>
+            </div>
+       
+</section>
+
+<section class="who_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="img-box">
+                    <img src="{% static 'images/who-img.jpg' %}" alt="" style="width: 70%;">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="detail-box">
+                    <div class="heading_container">
+                        <h2>POR QUÉ NOSOTROS?</h2>
+                    </div>
+                    <p>Nuestro equipo de diseñadores web trabajará con usted para crear un sitio web que refleje la identidad única de su negocio. Le ayudaremos a elegir una combinación de colores, un tipo de letra y un diseño que haga que su sitio web destaque entre los demás.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Creative Works Section -->
+<section class="work_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h5><a href="{% url 'contacto' %}">
+ </h6><h2>ALGUNAS APPS CREATIVAS</h2></a>
+            <p>Que podrían ser de tu gusto</p>
+            <!-- Inicio del carrusel -->
+            <div class="container">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Configuración de intervalo automático -->
+                    <script>
+                        $(document).ready(function () {
+                            $('#myCarousel').carousel({
+                                interval: 8000 // Cambia la velocidad de cambio de imagen a 8 segundos (8000 ms)
+                            });
+                        });
+                    </script>
+                    <!-- Indicadores de imágenes -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Imágenes del carrusel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/w1.jpg' %}" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/w2.jpg' %}" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/w3.jpg' %}" alt="Imagen 3">
+                        </div>
+                        <!-- Agrega más imágenes aquí -->
+                    </div>
+                    <!-- Controles del carrusel -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+           
+</section>
+
+<!-- What Customers Say Section -->
+<section class="client_section">
+    <div class="container">
+        <div class="heading_container">
+            <!-- Agrega más contenido aquí -->
+        </div>
+    </div>
+</section>
+<!-- Fin de la sección de opiniones de los clientes -->
+
+</body>
+</html>
+{% endblock camb %}

@@ -1,0 +1,243 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MSW</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive styles -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/celu.css' %}">
+
+    <style>
+        /* Estilos específicos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .navbar-brand span {
+                font-size: 18px; /* Tamaño de fuente del logotipo en dispositivos móviles */
+            }
+
+            .carousel-item.active .detail-box h2 {
+                font-size: 26px; /* Tamaño de fuente del título en el carrusel en dispositivos móviles */
+            }
+
+            .carousel-item.active .detail-box h1 {
+                font-size: 36px; /* Tamaño de fuente del título principal en el carrusel en dispositivos móviles */
+            }
+
+            .carousel-item.active .detail-box p {
+                font-size: 14px; /* Tamaño de fuente del párrafo en el carrusel en dispositivos móviles */
+            }
+        }
+    </style>
+    <style>
+        /* Estilo para el título */
+        .titulo {
+            color: white; /* Color blanco por defecto */
+            transition: color 0.3s; /* Transición de color suave */
+        }
+
+        /* Cambiar el color a rojo cuando se pasa el mouse por encima */
+        .titulo:hover {
+            color: red; /* Color rojo al pasar el mouse por encima */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header_section">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+            
+                <span class="titulo">MSW MY SOLUCIONES S.A</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'inicio' %}"> INICIO <span class="sr-only">(current)</span></a>
+                        </li>
+                       
+                                                <li class="nav-item">
+                            <a class="nav-link" href="{% url 'quehacemos' %}"> REDES </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'portafolio' %}"> WEB </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contacto' %}">CONTACTO</a>
+                        </li>
+                    </ul>
+                    <div class="user_option">
+                        <a href="">
+                            <img src="{% static 'images/user.png' %}" alt="">
+                        </a>
+                        <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                            <button class="btn my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- End Header Section -->
+
+<!-- Slider Section -->
+<section class="slider_section position-relative" style="background-image: url('{% static 'images/hero-bg.jpg' %}'); margin-top: -100px; padding-top: 70px;">
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col">
+                            <div class="detail-box">
+                            </div>
+                           <div style="text-align: center;">
+                           
+    <h2>BIENVENIDO A TU AGENCIA WEB</h2>
+    
+    <p>Todo lo que te podrá aportar una Aplicación Web en tu negocio
+    Disponer de una Aplicación Web significa un escalón fundamental para cualquier empresa. Supone un enfoque del servicio en mejorar la experiencia del consumidor.<br>
+    Y también aumentar las conversiones de tu marca.</p><br><br>
+    </div>
+    <div style="text-align: center;">
+    <a href="{% url 'contacto' %}" class="nav-link">Contacto</a>
+</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Slider Section -->
+
+{% block cambia %}
+    <!-- Agrega el contenido específico de esta página aquí -->
+{% endblock cambia %}
+{% block camb %}
+{% endblock camb %}
+
+<!-- Info Section -->
+<section class="info_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="info_contact">
+                    <h5><a href="{% url 'contacto' %}">Contacto directo</a></h5>
+
+                    <div>
+                        <div class="img-box">
+                            <img src="{% static 'images/location-white.png' %}" width="18px" alt="">
+                        </div>
+                        <p>Punta del Este - UY <br>
+                        Cordoba- ARG</p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="{% static 'images/telephone-white.png' %}" width="12px" alt="">
+                        </div>
+                        <p>+598 098075525 - <br>
+                        +54 3516076886</p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="{% static 'images/envelope-white.png' %}" width="18px" alt="">
+                        </div>
+                        <p>mysolucionessa@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="info_info">
+                    <h5>Localizacion</h5>
+                    <p>Nuestras oficinas nuestra web, nuestra localizacion es AMERICA LATINA ya que somos un grupo de profecionales divididos por LATAM<br>
+                    SOLICITE UNA REUNION</p>
+                </div>
+            </div>
+      
+            <div class="col-md-3">
+                <div class="info_form">
+                    <h5>NOTICIAS</h5>
+                    <form action="">
+                        <input type="email" placeholder="Enter your email">
+                        <button>Quiero informarme</button>
+                    </form>
+                    <div class="social_box">
+                        <a href="">
+                            <img src="{% static 'images/fb.png' %}" alt="https://www.instagram.com/mysolucionessa/">
+                        </a>
+                        <a href="">
+                            <img src="{% static 'images/twitter.png' %}" alt="https://www.instagram.com/mysolucionessa/">
+                        </a>
+                        <a href="">
+                            <img src="{% static 'images/linkedin.png' %}" alt="https://www.instagram.com/mysolucionessa/">
+                        </a>
+                        <a href="">
+                            <img src="{% static 'images/youtube.png' %}" alt="https://www.instagram.com/mysolucionessa/">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Info Section -->
+
+<!-- Footer Section -->
+<section class="container-fluid footer_section">
+    <p>&copy; 2023 All Rights Reserved By  MY SOLUCIONES S.A</a></p>
+</section>
+<!-- End Footer Section -->
+
+<script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 0,
+        navText: [],
+        center: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+</script>
+</body>
+</html>
